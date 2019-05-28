@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOADING ANIM</title>
+	<script type="text/javascript" src="game.js"></script>
+	<style>
+		.loader-frame{
+			border: 1px solid rgba(0,0,0,0);
+			background-color: rgba(0,0,0, 0.4);
+			width:800px;
+			height:300px;
+			position:absolute;
+			margin-top: 250px;
+			margin-left: 300px;
+			display:none;
+		}
+		.welcome{
+			position:absolute;
+			margin-top: 250px;
+			margin-left: 100px;
+			overflow-x: hidden;
+			animation-name: welcome;
+			animation-delay:1s;
+			animation-duration: 5s;
+		}
+
+		@keyframes welcome{
+			from{
+				color:black;
+			}
+			to{
+				color:white;
+			}
+		}
+
+		.welcome-text{
+			font-size:100px;
+		}
+		.loader-box{
+			border: 1px solid teal;
+			background-color: rgba(0,0,0, 0.4);
+			width: 400px;
+			height: 30px;
+			position:absolute;
+			margin-left:100px;
+			margin-top:70px;
+		}
+		body{
+			background-image: url('jar.jpg');
+			background-size:cover;
+		}
+		.loading-text{
+			font-size:75px;
+			font-family: 'Cute Font', cursive;
+			color:white;
+			font-weight:900;
+		}
+		.loader{
+			width: 400px;
+			height: 30px;
+			background-color: grey;
+			animation-name: loader;
+			animation-duration: 7s;
+		}
+
+		@keyframes loader{
+			from{
+				width : 0px;
+			}
+			to{
+				width: 400px;
+			}
+		}
+
+		.hh{
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body onload="start()">
+	<embed name="themesong" src="theme.mp3" loop="false" hidden="true" autostart="true">
+	<div class="welcome">
+		<span class="welcome-text">
+			AVENGERS END GAME
+		</span>
+	</div>
+	<div class="loader-frame">
+		<div class="loading-text">LOADING GAME.....</div>
+		<div class="loader-box">
+			<div class="loader">
+			
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GAME</title>
+	<script type="text/javascript" src="game.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<style>
+		body{
+			background-image:url('tt5.jpg');
+			background-size: cover;
+		}
+		.im,.goku{
+			height:150px;
+			width:100px;
+			position:absolute;
+			top:60px;
+		}
+		.goku{
+			right:0px;
+		}
+		.im img,.goku img{
+			height:150px;
+			width:100px;
+		}
+		.energyball{
+			width: 50px;
+			height: 50px;
+			position:absolute;
+			animation-name :balls;
+			animation-duration : 3s;
+			animation-timing-function: linear;
+			right:1300px;
+		}
+
+		@keyframes balls{
+			from{ right: 200px; } 
+			to {
+				right:1300px;
+			}
+		}
+
+		.energyballimg{
+			width:50px;
+			height:50px;
+		}
+		.imattack{
+			width: 50px;
+			height: 50px;
+			position:absolute;
+			animation-name :beam;
+			animation-duration :4s;
+			animation-timing-function: linear;
+		}
+
+		
+		.imattackimg{
+			width:100px;
+			height:50px;
+		}
+		.gameover-msg{
+			display: none;
+			font-size:120px;
+			background-color:rgba(0,0,0, 0.8);
+			color:white;
+			height :400px;
+			width:1000px;
+			margin-left:180px ;
+		}
+		.gameover-msg p{
+			text-align: center;
+		}
+
+		.score{
+			font-size:40px;
+			text-align: center;
+		}
+
+		.showscore{
+			font-size:30px;
+			font-weight:900;
+			color:white;
+		}
+		.imlifebar{
+			width:300px;
+			height:30px;
+			border: 1px solid white;
+			position: absolute;
+			top:8px;
+			left:200px;
+
+		}
+		.fillimbar{
+			width:300px;
+			height:30px;
+			background-color:orange;
+		}
+
+		.replay,.help{
+			font-size:50px;
+			position:absolute;
+			top:370px;
+			margin-left:800px;
+		}
+		.replay a, .help a{
+			color:white;
+		}
+		.help{
+			margin-left:900px;
+		}
+	</style>
+</head>
+<body>
+<div class="gamescreen">
+	<div class="showscore">SCORE : </div>
+	<div class="imlifebar">
+		<div class="fillimbar"></div>
+	</div>
+	<div class="im"><img class= 'im_image' src="steerup.png"></div>
+	<div class="goku"><img src="sayn.gif"></div>
+	<div class="into"></div>
+	<div class="gameover-msg"><P>GAMEOVER</P>
+		<div class="score">your score: </div>
+		<p class="replay"><a href="avengers end game.html"><i class="fas fa-undo-alt"></i></a></p>
+		<p class="help"><a href="help.html"><i class="far fa-question-circle"></i></a></p>
+	</div>
+</div>
+</body>
+</html>
